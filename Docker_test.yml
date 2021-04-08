@@ -2,15 +2,14 @@ version: "3.1"
 services:
   Testproject-agent:
     image: testproject/agent:latest
-    container_name: testproject-agent3
+    container_name: testproject-agent
     depends_on:
       - chrome
       - firefox
     environment:
-      TP_API_KEY: M-OJQBbJmTVJrZa1VbKJ-Q4kHilkMs0RrhLOHQ0pR_A1
-      TP_AGENT_ALIAS: "Docker Agent"
-      TP_JOB_ID: TRO_5vEMFkOK8Rdxakf_uQ
-      TP_JOB_PARAMS: '"jobParameters" : { "browsers": [ "chrome" ] }'
+      TP_API_KEY: "M-OJQBbJmTVJrZa1VbKJ-Q4kHilkMs0RrhLOHQ0pR_A1"
+      TP_JOB_ID: "TRO_5vEMFkOK8Rdxakf_uQ"
+      TP_JOB_PARAMS: '"jobParameters" : { "browsers": [ "Chrome" ] }'
       CHROME: "chrome:4444"
       FIREFOX: "firefox:4444"
   chrome:
